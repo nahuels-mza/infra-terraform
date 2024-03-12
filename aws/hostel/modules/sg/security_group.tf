@@ -9,8 +9,8 @@ variable "egress_port" {
   default = [80, 80, 443]
 
 }
-resource "aws_security_group" "web_sg" {
-  name = "web_security_group"
+resource "aws_security_group" "base_sg" {
+  name = "base_security_group"
   dynamic "ingress" {
     iterator = port
     for_each = var.ingress_port
@@ -42,6 +42,5 @@ resource "aws_security_group" "web_sg" {
 }
 
 output "sg_name" {
-  value = aws_security_group.web_sg.name
-
+  value = aws_security_group.base_sg.name
 }
