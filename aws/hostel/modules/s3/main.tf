@@ -5,6 +5,7 @@ resource "aws_s3_bucket" "s3" {
     Name = "hostel-bucket"
     Env  = "Dev"
   }
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_website_configuration" "s3_web" {
@@ -12,6 +13,10 @@ resource "aws_s3_bucket_website_configuration" "s3_web" {
 
   index_document {
     suffix = "index.html"
+  }
+  # TODO: Improve this to make it general to any built app, not just the react one
+  error_document {
+    key = "koala-hostel/index.html"
   }
 }
 
