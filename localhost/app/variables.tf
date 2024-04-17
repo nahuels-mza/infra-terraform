@@ -1,6 +1,12 @@
+variable "label" {
+  type        = string
+  default     = "hostel-app"
+  description = "default label for objects"
+}
+
 variable "namespace" {
   type    = string
-  default = "docker"
+  default = "hostel"
 }
 
 variable "config_context_cluster" {
