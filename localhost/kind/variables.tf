@@ -6,7 +6,14 @@ variable "config_context_cluster" {
 
 variable "namespace" {
   type        = string
-  default     = "kind"
+  default     = "application"
   description = "Base namespace"
+
+}
+
+variable "cluster_name" {
+  type        = string
+  default     = "kind"
+  description = "Kind cluster name"
 
 }

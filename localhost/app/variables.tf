@@ -6,7 +6,7 @@ variable "label" {
 
 variable "namespace" {
   type    = string
-  default = "hostel"
+  default = ""
 }
 
 variable "config_context_cluster" {

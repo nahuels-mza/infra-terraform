@@ -24,4 +24,5 @@ module "app" {
   source                 = "../app/"
   config_context_cluster = var.config_context_cluster
   namespace              = var.namespace
+  depends_on             = [null_resource.kubectl]
 }
