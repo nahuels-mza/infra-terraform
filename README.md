@@ -1,6 +1,7 @@
-# infra-terraform
-A place to save infra resources from the other projects
+# Infra-terraform
+A place to create infra resources for other personal projects 
 
-The idea is to play around with infrastructure for aws and azure by using another personal application
+The idea is to deploy a kubernete cluster in different provider, originally AWS but then it changed to include localhost tools. Eventually will do Azure deployments
 
-The main aplication to deploy infrastucture will be Terraform so we can follow Infrastructure as a Code (good) practices
+By using Terraform I can follow Infrastructure as a Code (good) practices and make sure the same core structure can be replicated across different providers.
+The application to be deployed is the same across every single process and can be found at https://github.com/nahuels-mza/koala-hostel
